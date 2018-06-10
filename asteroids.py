@@ -36,15 +36,15 @@ def radius_calc(name):
 SPACESHIP_PIC = pic_load('puddle_jumper.png')
 
 ENEMIES_PICS = {1 : pic_load('wrejti.png'), 
-						2: pic_load('oraji.png'), 
-						3: pic_load('hatak.png'), 
-						4: pic_load('hatak2.png')}
+		2: pic_load('oraji.png'), 
+		3: pic_load('hatak.png'), 
+		4: pic_load('hatak2.png')}
 
 LASER_PIC = pic_load('fire.png')						
 
 GUMMIBEAR_PICS = (pic_load('gummibear_red.png'), 
-						pic_load('gummi_bear_yellow.png'), 
-						pic_load('gummi_bear_green.png'))
+		pic_load('gummi_bear_yellow.png'), 
+		pic_load('gummi_bear_green.png'))
 
 MESS_PIC = pic_load('deadspaceshipmess.png')
 
