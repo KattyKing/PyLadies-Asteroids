@@ -117,13 +117,13 @@ class Spaceship(SpaceObject):
 		self.time = 0
 		
 		super().__init__(window = window, 
-								picture = SPACESHIP_PIC, 
-								x = window.width / 2,
-								y = window.height * 1/4,
-								radius = SPACESHIP_RADIUS,
-								speed_x = 0,
-								speed_y = 0,
-								rotation = rotation
+				picture = SPACESHIP_PIC, 
+				x = window.width / 2,
+				y = window.height * 1/4,
+				radius = SPACESHIP_RADIUS,
+				speed_x = 0,
+				speed_y = 0,
+				rotation = rotation
 							)
 
 							
@@ -226,13 +226,13 @@ class Enemies(SpaceObject):
 				speed_y = random.randrange(-ENEMIES_SPEED, ENEMIES_SPEED)
 				
 		super().__init__(window = window, 
-								picture = ENEMIES_PICS[enemies_type], 
-								x = x, 
-								y = y, 
-								speed_x = speed_x,
-								speed_y = speed_y,
-								radius = ENEMY_RADIUS[enemies_type],
-								rotation = rotation,
+				picture = ENEMIES_PICS[enemies_type], 
+				x = x, 
+				y = y, 
+				speed_x = speed_x,
+				speed_y = speed_y,
+				radius = ENEMY_RADIUS[enemies_type],
+				rotation = rotation,
                         )
 
 			
@@ -259,12 +259,12 @@ class Enemies(SpaceObject):
 	def dead_spaceship(self):
 		'''Creating a DeadSpaceshipMess object.'''
 		mess = DeadSpaceshipMess(self.window, 
-											x = self.sprite.x, 
-											y = self.sprite.y, 
-											speed_x = 0, 
-											speed_y = 0, 
-											rotation = 0, 
-											radius = 0)
+					x = self.sprite.x, 
+					y = self.sprite.y, 
+					speed_x = 0, 
+					speed_y = 0, 
+					rotation = 0, 
+					radius = 0)
 		objects.append(mess)
 		
 		
@@ -283,13 +283,13 @@ class Laser(SpaceObject):
 		speed_x = speed_x_ship + LASER_SPEED * math.cos(math.radians(rotation))
 		speed_y = speed_y_ship + LASER_SPEED * math.sin(math.radians(rotation))
 		super().__init__(window, 
-								x = x + math.cos(math.radians(rotation)), 
-								y = y + math.sin(math.radians(rotation)), 
-								speed_x = speed_x,
-								speed_y = speed_y,
-								rotation = rotation, 
-								picture = LASER_PIC, 
-								radius = LASER_RAD,)
+				x = x + math.cos(math.radians(rotation)), 
+				y = y + math.sin(math.radians(rotation)), 
+				speed_x = speed_x,
+				speed_y = speed_y,
+				rotation = rotation, 
+				picture = LASER_PIC, 
+				radius = LASER_RAD,)
 	
 	def tick(self, dt):
 		'''Method responsible for moving and lifetime of laser.'''
@@ -313,13 +313,13 @@ class GummiBearAttack(SpaceObject):
 		speed_x = speed_x_ship + GUMMI_BEAR_SPEED * math.cos(math.radians(rotation))
 		speed_y = speed_y_ship + GUMMI_BEAR_SPEED * math.sin(math.radians(rotation))
 		super().__init__(window, 
-								x=x + math.cos(math.radians(rotation)), 
-								y=y + math.sin(math.radians(rotation)), 
-								speed_x=speed_x,
-								speed_y=speed_y,
-								rotation=rotation, 
-								picture=random.choice(GUMMIBEAR_PICS), 
-								radius=GUMMIBEAR_RAD,)
+				x=x + math.cos(math.radians(rotation)), 
+				y=y + math.sin(math.radians(rotation)), 
+				speed_x=speed_x,
+				speed_y=speed_y,
+				rotation=rotation, 
+				picture=random.choice(GUMMIBEAR_PICS), 
+				radius=GUMMIBEAR_RAD,)
 	
 	def tick(self, dt):
 		'''Method responsible for moving and lifetime of gummy bear.'''
@@ -343,12 +343,12 @@ class DeadSpaceshipMess(SpaceObject):
 		self.bonsaj = 1
 
 		super().__init__(window, 
-								x = x, y = y, 
-								speed_x = speed_x,
-								speed_y = speed_y,
-								rotation = rotation,
-								picture = MESS_PIC,
-								radius = radius)
+				x = x, y = y, 
+				speed_x = speed_x,
+				speed_y = speed_y,
+				rotation = rotation,
+				picture = MESS_PIC,
+				radius = radius)
 
 	def tick(self,dt):
 		'''Method responsible for lifetime of mess.'''
