@@ -251,8 +251,8 @@ class Enemies(SpaceObject):
 
 
 	def hit_by_enemy(self, spaceship):
-		'''Method deletes players ship, when this ship and enemy are too close.
-			It calls dead_spaceship method for creating a mess after colision.'''
+		'''Method deletes players ship when this ship and enemy are too close.
+			It calls dead_spaceship method for creating a mess after collision.'''
 		spaceship.delete()
 		self.dead_spaceship()
 	
